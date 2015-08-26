@@ -1,6 +1,6 @@
 var Node = function(value) {
   this.value = value;
-  this.next=  null;
+  this.next = null;
 }
 
 var LinkedList = function() {
