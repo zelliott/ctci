@@ -3,7 +3,8 @@ describe('2.5', function() {
   var LinkedList = require('../../utils/linkedlist.js').linkedlist;
 
   var list1;
-  var list2
+  var list2;
+
   beforeEach(function() {
     list1 = new LinkedList();
     list2 = new LinkedList();
