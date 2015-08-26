@@ -1,6 +1,6 @@
 var Queue = function(size) {
   this._queue = [];
-  this.size = size;
+  this.size = size || Infinity;
 };
 
 Queue.prototype = {
