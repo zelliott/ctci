@@ -12,7 +12,7 @@ Stack.prototype = {
   },
 
   peek: function() {
-    return this._stack[stack.length - 1];
+    return this._stack[this._stack.length - 1];
   },
 
   empty: function() {
