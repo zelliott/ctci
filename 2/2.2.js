@@ -1,7 +1,6 @@
 var Ctci = function() {};
 var Queue = require('../utils/queue.js');
 
-
 Ctci.prototype.findKthToLast = function(list, k) {
 
   // Create queue with a max size of 'k'
