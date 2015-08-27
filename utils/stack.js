@@ -17,6 +17,10 @@ Stack.prototype = {
 
   empty: function() {
     this._stack = [];
+  },
+
+  isEmpty: function() {
+    return this._stack.length === 0;
   }
 };
 
