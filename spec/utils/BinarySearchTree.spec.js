@@ -28,4 +28,22 @@ describe('BinarySearchTree', function() {
     expect(binarySearchTree.find(2)).toEqual(2);
     expect(binarySearchTree.find(0)).toEqual(undefined);
   });
+
+  it('returns the height of an empty tree to be 0', function() {
+    expect(binarySearchTree.height()).toEqual(0);
+  });
+
+  it('returns the height of a non-empty tree correctly', function() {
+    binarySearchTree.add(1);
+    expect(binarySearchTree.height()).toEqual(1);
+    binarySearchTree.add(2);
+    expect(binarySearchTree.height()).toEqual(2);
+    binarySearchTree.add(3);
+    expect(binarySearchTree.height()).toEqual(3);
+  });
+
+  it('returns the height of a more complex tree correctly', function() {
+    binarySearchTree.groupAdd([2, 3, 1, 6, 4, 8, 5]);
+    expect(binarySearchTree.height()).toEqual(5);
+  });
 });

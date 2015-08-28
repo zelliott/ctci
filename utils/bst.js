@@ -97,6 +97,23 @@ BinarySearchTree.prototype = {
   /* Returns the root of the BST */
   root: function() {
     return this._root;
+  },
+
+  /* Returns the neight of the BST */
+  height: function() {
+    function height(node) {
+      if (node === null) {
+        return 0;
+      }
+
+      return 1 + Math.max(height(node.left), height(node.right));
+    }
+
+    if (this._root === null) {
+      return 0;
+    }
+
+    return 1 + Math.max(height(this._root.left), height(this._root.right));
   }
 };
 
