@@ -3,7 +3,7 @@ var Ctci = function() {};
 // Note: this function takes in an 'object-like' tree,
 // not a specific BST or BinaryTree object.
 Ctci.prototype.isBST = function(tree) {
-  var preorderValues = [];
+  var inorderValues = [];
 
   function traverse(node) {
     if (node === null) {
@@ -11,14 +11,14 @@ Ctci.prototype.isBST = function(tree) {
     }
 
     traverse(node.left);
-    preorderValues.push(node.value);
+    inorderValues.push(node.value);
     traverse(node.right);
   }
 
   traverse(tree.root);
 
-  for (var i = 1; i < preorderValues.length; i++) {
-    if (preorderValues[i - 1] > preorderValues[i]) {
+  for (var i = 1; i < inorderValues.length; i++) {
+    if (inorderValues[i - 1] > inorderValues[i]) {
       return false;
     }
   }
