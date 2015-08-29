@@ -1,6 +1,44 @@
-// TODO: Need to finish
+// Would merge in sorted order the following arrays:
+// [1, 2, 5, 9]
+// [3, 4, 6, 10]
+//
+// TODO: This 'break;' and 'continue;' pattern needs to be
+// revisitied...
 function merge(arrA, arrB) {
-  console.log(arrA, arrB);
+  var result = [];
+  var indexA = 0;
+  var indexB = 0;
+
+  while (true) {
+    var outOfA = indexA >= arrA.length;
+    var outOfB = indexB >= arrB.length;
+
+    if (outOfA && outOfB) {
+      break;
+    }
+
+    if (outOfA && !outOfB) {
+      result.push(arrB[indexB]);
+      indexB++;
+      continue;
+    }
+
+    if (outOfB && !outOfA) {
+      result.push(arrA[indexA]);
+      indexA++;
+      continue;
+    }
+
+    if (arrA[indexA] < arrB[indexB]) {
+      result.push(arrA[indexA]);
+      indexA++;
+    } else {
+      result.push(arrB[indexB]);
+      indexB++;
+    }
+  }
+
+  return result;
 }
 
 function mergeSort(arr) {
