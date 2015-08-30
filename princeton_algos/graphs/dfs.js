@@ -30,7 +30,10 @@ function dfsRecursive(graph, node, visited) {
   console.log('visited: ' + node);
   visited[node] = true;
 
+  // For each adjacent node...
   for (var i = 0; i < adjacent.length; i++) {
+
+    // If it has not been visited, run dfs on it
     if (typeof visited[adjacent[i]] === 'undefined') {
       dfsRecursive(graph, adjacent[i], visited);
     }
