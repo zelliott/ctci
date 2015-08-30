@@ -73,7 +73,6 @@ describe('Graph', function() {
     });
   });
 
-
   it('should properly add edges to a directed graph', function() {
     directedGraph.addNode(1);
     directedGraph.addNode(2);

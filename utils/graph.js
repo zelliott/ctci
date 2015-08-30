@@ -40,6 +40,10 @@ Graph.prototype = {
     return this.nodes;
   },
 
+  getNeighbors: function(value) {
+    return this.nodes[value];
+  },
+
   getProperties: function() {
     return {
       'directed': this.directed
