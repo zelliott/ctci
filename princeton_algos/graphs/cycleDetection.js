@@ -26,7 +26,8 @@ function cycleDetection(graph) {
 
         // Don't add the neighbor we *just* came from...
         // FIXME: This '!=' is bad style, used because we are comparing 1 with '1'
-        // for some reason...
+        // for some reason.
+        // FIXME: Also, I can use visited instead of this cameFrom variable...
         if (typeof cameFrom === 'undefined' || adjacencyList[node][i] != cameFrom) {
           stack.push({
             'node': adjacencyList[node][i],
