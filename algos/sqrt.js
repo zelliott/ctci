@@ -11,7 +11,6 @@ function sqrtFn(n) {
   var lowerBound = n;
 
   while(Math.abs(upperBound - lowerBound) > ERROR_MARGIN) {
-    console.log(upperBound, lowerBound);
     upperBound = (upperBound + lowerBound) / 2;
     lowerBound = n / upperBound;
   }

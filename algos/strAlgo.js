@@ -25,7 +25,7 @@ function recurseHash(hash, val, maxChainLength) {
   for (var i = 0; i < val.length; i++) {
     alteredStrs.push(val.slice(0, i) + val.slice(i + 1, val.length));
   }
-console.log(alteredStrs);
+
   // For each altered str
   for (i = 0; i < alteredStrs.length; i++) {
     var alteredStr = alteredStrs[i];
